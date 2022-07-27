@@ -10,9 +10,13 @@ public class Main {
         while (scanner.hasNext()) {
             int num = scanner.nextInt();
             // submit tasks to your executor
-
-        }
-    }
+            PrimeLogger prime = new PrimeLogger(num);
+            if (num != 0){
+                prime.run();
+             } else {break;}
+            }
+        executor.shutdown();
+}
 }
 
 class PrimeLogger implements Runnable {
