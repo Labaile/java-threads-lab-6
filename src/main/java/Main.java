@@ -13,10 +13,11 @@ public class Main {
             PrimeLogger prime = new PrimeLogger(num);
             if (num != 0){
                 prime.run();
-             } else {break;}
-            }
+            } else {break;}
+        }
         executor.shutdown();
-}
+        System.out.println(executor.isShutdown());
+    }
 }
 
 class PrimeLogger implements Runnable {
@@ -44,4 +45,4 @@ class PrimeLogger implements Runnable {
         else
             System.out.println(num + " is not a prime number.");
     }
-    }
+}
